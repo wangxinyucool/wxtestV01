@@ -54,8 +54,8 @@ class CarbonEstimator:
             return 0.0
 
         try:
-            # **已修复**: kWh 转换为 MWh 应该是乘以 1000
-            consumption_mwh = float(consumption_kwh) * 1000.0
+            # **已修复**: kWh 转换为 MWh 应该是除以 1000
+            consumption_mwh = float(consumption_kwh) / 1000.0
         except (ValueError, TypeError):
             return 0.0
 
